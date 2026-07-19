@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .project-grid {
