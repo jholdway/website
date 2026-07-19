@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: #111111;
+    background-color: #f40505;
     color: #ffffff;
 
     font-family: monospace;
