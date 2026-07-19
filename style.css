@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .project-grid {
@@ -29,3 +29,8 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
+<style>
+  .center-text {
+    text-align: center;
+  }
+</style>
