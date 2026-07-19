@@ -1,178 +1,175 @@
-/* ---------- */
-/* VARIABLES */
-/* ---------- */
+/* ==========================================
+   JOHN HOLDWAY ART LAB
+   style.css
+   ========================================== */
 
-:root {
+/* ---------- Reset ---------- */
 
-    --bg: #111;
-    --surface: #222;
-    --border: #444;
-    --text: #f2f2f2;
-    --accent: #8bd3ff;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #111111;
+    color: #ffffff;
+
+    font-family: monospace;
+    line-height: 1.6;
+}
+
+/* ---------- Skip Link ---------- */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+
+    background: white;
+    color: black;
+
+    padding: .5rem 1rem;
+}
+
+/* ---------- Layout ---------- */
+
+header,
+main,
+footer {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 1.5rem;
 
 }
 
-/* ---------- */
-/* GLOBAL */
-/* ---------- */
+/* ---------- Headings ---------- */
 
-*{
+h1 {
 
-    box-sizing:border-box;
+    margin-top: 0;
 
-}
-
-html{
-
-    font-size:16px;
+    font-size: 2.5rem;
 
 }
 
-body{
+h2 {
 
-    margin:0;
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    font-family:system-ui,
-                sans-serif;
-
-    line-height:1.7;
+    margin-top: 0;
 
 }
 
-/* ---------- */
+.tagline {
 
-.skip-link{
+    color: #bbbbbb;
 
-    position:absolute;
-    left:-9999px;
-
-}
-
-.skip-link:focus{
-
-    left:1rem;
-    top:1rem;
+    margin-bottom: 2rem;
 
 }
 
-/* ---------- */
+/* ---------- Intro ---------- */
 
-header{
+.intro {
 
-    max-width:60rem;
-
-    margin:auto;
-
-    padding:2rem 1rem;
+    margin-bottom: 2rem;
 
 }
 
-main{
+/* ---------- Project Grid ---------- */
 
-    max-width:60rem;
+.project-grid {
 
-    margin:auto;
+    display: grid;
 
-    padding:1rem;
+    grid-template-columns: 1fr;
 
-}
-
-footer{
-
-    max-width:60rem;
-
-    margin:auto;
-
-    padding:2rem 1rem;
-
-    opacity:.6;
+    gap: 1rem;
 
 }
 
-/* ---------- */
+/* ---------- Cards ---------- */
 
-h1{
+.card {
 
-    font-size:clamp(2.5rem,6vw,5rem);
+    background-color: #222222;
 
-    margin-bottom:.25rem;
+    border: 1px solid #444444;
 
-}
+    padding: 1rem;
 
-.tagline{
-
-    opacity:.7;
+    border-radius: 8px;
 
 }
 
-/* ---------- */
+.card:hover {
 
-.project-grid{
-
-    display:grid;
-
-    gap:1rem;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(16rem,1fr));
-
-    margin-top:2rem;
+    border-color: white;
 
 }
 
-/* ---------- */
+/* ---------- Links ---------- */
 
-.card{
+a {
 
-    background:var(--surface);
+    color: #66ccff;
 
-    border:1px solid var(--border);
-
-    padding:1.25rem;
-
-    border-radius:8px;
+    text-decoration: none;
 
 }
 
-.card:hover{
+a:hover {
 
-    border-color:var(--accent);
-
-}
-
-/* ---------- */
-
-a{
-
-    color:var(--accent);
+    text-decoration: underline;
 
 }
 
-a:hover{
+a:focus {
 
-    text-decoration:none;
+    outline: 2px solid white;
 
-}
-
-a:focus-visible{
-
-    outline:3px solid white;
-
-    outline-offset:4px;
+    outline-offset: 3px;
 
 }
 
-/* ---------- */
+/* ---------- Footer ---------- */
 
-@media (min-width:900px){
+footer {
 
-    body{
+    color: #999999;
 
-        font-size:1.05rem;
+    font-size: .9rem;
+
+}
+
+/* ---------- Responsive Layout ---------- */
+
+@media screen and (min-width: 700px) {
+
+    .project-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    .project-grid {
+
+        grid-template-columns: repeat(3, 1fr);
 
     }
 
