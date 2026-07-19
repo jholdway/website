@@ -29,8 +29,6 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
-<style>
   .center-text {
     text-align: center;
   }
-</style>
